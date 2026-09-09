@@ -9,7 +9,7 @@
 | :--- | :--- |
 | **Project Title** | Smart Campus Lab & Resource Reservation System |
 | **Course Code & Title** | CSE2006: Programming in Java |
-| **Academic Framework** | VITyarthi - Build Your Own Project (Flipped Course Evaluation) |
+| **Project Category** | Academic Course Capstone Project |
 | **Institution** | Vellore Institute of Technology (VIT) |
 | **Student Name** | Rohan Chetty |
 | **Registration Number** | 23BCE10045 |
@@ -75,7 +75,7 @@ The system provides four core functional modules:
 2. **Performance & Low Latency:** Slot lock acquisition, availability matrix calculations, and booking transactions must complete within under 20 milliseconds under standard load.
 3. **Data Integrity & Persistence:** All user records, facility specifications, and reservation ledgers must persist across system restarts using atomic file I/O.
 4. **Usability & Dual Interface Support:** The system must provide both an intuitive keyboard-navigable terminal console (with ANSI formatting) and a clean Java Swing graphical desktop application.
-5. **Maintainability & Extensibility:** The architecture must strictly follow SOLID design principles and standard Java package conventions (`com.vityarthi.campus.*`) to enable seamless addition of new facilities or database backends.
+5. **Maintainability & Extensibility:** The architecture must strictly follow SOLID design principles and standard Java package conventions (`com.campus.reserve.*`) to enable seamless addition of new facilities or database backends.
 
 ---
 
@@ -371,14 +371,14 @@ erDiagram
 
 The implementation comprises over 1,800 lines of modular Java code organized across clean packages:
 
-- **`com.vityarthi.campus.config`:** Institutional parameters (`CampusConfig`) providing campus branding and configurable parameters.
-- **`com.vityarthi.campus.model`:** Domain models (`User`, `Student`, `Faculty`, `LabAdmin`, `Resource`, `LabRoom`, `Equipment`, `TimeSlot`, `Reservation`, and lifecycle enums).
-- **`com.vityarthi.campus.concurrency`:** Thread synchronization primitives (`SlotLockManager`, `ConcurrentBookingWorker`, and `ReservationResult`).
-- **`com.vityarthi.campus.storage`:** Repository interface (`DataStorage`) and persistent CSV implementation (`FileDataStorage`).
-- **`com.vityarthi.campus.service`:** Transactional services (`AuthService`, `ResourceService`, `ReservationService`, `AnalyticsService`).
-- **`com.vityarthi.campus.ui`:** Interactive console (`ConsoleUI`) and Swing desktop client (`CampusReserveGUI`).
-- **`com.vityarthi.campus.test`:** Comprehensive test suite (`ReservationTestSuite`).
-- **`com.vityarthi.campus.Main`:** Central runtime dispatcher supporting `--cli`, `--gui`, and `--test` launch flags.
+- **`com.campus.reserve.config`:** Institutional parameters (`CampusConfig`) providing campus branding and configurable parameters.
+- **`com.campus.reserve.model`:** Domain models (`User`, `Student`, `Faculty`, `LabAdmin`, `Resource`, `LabRoom`, `Equipment`, `TimeSlot`, `Reservation`, and lifecycle enums).
+- **`com.campus.reserve.concurrency`:** Thread synchronization primitives (`SlotLockManager`, `ConcurrentBookingWorker`, and `ReservationResult`).
+- **`com.campus.reserve.storage`:** Repository interface (`DataStorage`) and persistent CSV implementation (`FileDataStorage`).
+- **`com.campus.reserve.service`:** Transactional services (`AuthService`, `ResourceService`, `ReservationService`, `AnalyticsService`).
+- **`com.campus.reserve.ui`:** Interactive console (`ConsoleUI`) and Swing desktop client (`CampusReserveGUI`).
+- **`com.campus.reserve.test`:** Comprehensive test suite (`ReservationTestSuite`).
+- **`com.campus.reserve.Main`:** Central runtime dispatcher supporting `--cli`, `--gui`, and `--test` launch flags.
 
 ---
 

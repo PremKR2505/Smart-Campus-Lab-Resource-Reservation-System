@@ -32,7 +32,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setFont("Helvetica", 8)
         self.setFillColor(colors.HexColor("#555555"))
         # Top Header
-        self.drawString(54, 750, "VITyarthi Project Report | CSE2006: Programming in Java")
+        self.drawString(54, 750, "Academic Project Report | CSE2006: Programming in Java")
         self.drawRightString(558, 750, "Smart Campus Lab & Resource Reservation System")
         self.setStrokeColor(colors.HexColor("#CCCCCC"))
         self.setLineWidth(0.5)
@@ -140,7 +140,7 @@ def build_pdf():
 
     cover_meta = [
         [Paragraph("<b>Course Code & Title:</b>", body_style), Paragraph("CSE2006: Programming in Java", body_style)],
-        [Paragraph("<b>Evaluation Component:</b>", body_style), Paragraph("VITyarthi - Build Your Own Project (Flipped Evaluation)", body_style)],
+        [Paragraph("<b>Project Category:</b>", body_style), Paragraph("Academic Course Project (Programming in Java)", body_style)],
         [Paragraph("<b>Student Name:</b>", body_style), Paragraph("Rohan Chetty", body_style)],
         [Paragraph("<b>Registration Number:</b>", body_style), Paragraph("23BCE10045", body_style)],
         [Paragraph("<b>Degree & Branch:</b>", body_style), Paragraph("B.Tech - Computer Science and Engineering", body_style)],
@@ -279,14 +279,14 @@ def build_pdf():
     ))
     story.append(Spacer(1, 4))
     classes_summary = [
-        "<code>com.vityarthi.campus.config.CampusConfig</code>: Centralized institutional parameters and campus branding.",
-        "<code>com.vityarthi.campus.model.*</code>: User hierarchy (User, Student, Faculty, LabAdmin, UserRole), Resource hierarchy (Resource, LabRoom, Equipment, ResourceStatus), and Scheduling records (TimeSlot, Reservation, ReservationStatus).",
-        "<code>com.vityarthi.campus.concurrency.*</code>: ReentrantLock coordinator (SlotLockManager), task wrapper (ConcurrentBookingWorker), and outcome telemetry (ReservationResult).",
-        "<code>com.vityarthi.campus.storage.*</code>: Repository contract (DataStorage) and atomic file engine (FileDataStorage).",
-        "<code>com.vityarthi.campus.service.*</code>: Transactional controllers (AuthService, ResourceService, ReservationService, AnalyticsService).",
-        "<code>com.vityarthi.campus.ui.*</code>: Terminal interface (ConsoleUI) and Swing desktop app (CampusReserveGUI).",
-        "<code>com.vityarthi.campus.test.ReservationTestSuite</code>: Automated unit & multi-threaded race condition verification.",
-        "<code>com.vityarthi.campus.Main</code>: Multi-mode CLI, GUI, and test harness bootloader."
+        "<code>com.campus.reserve.config.CampusConfig</code>: Centralized institutional parameters and campus branding.",
+        "<code>com.campus.reserve.model.*</code>: User hierarchy (User, Student, Faculty, LabAdmin, UserRole), Resource hierarchy (Resource, LabRoom, Equipment, ResourceStatus), and Scheduling records (TimeSlot, Reservation, ReservationStatus).",
+        "<code>com.campus.reserve.concurrency.*</code>: ReentrantLock coordinator (SlotLockManager), task wrapper (ConcurrentBookingWorker), and outcome telemetry (ReservationResult).",
+        "<code>com.campus.reserve.storage.*</code>: Repository contract (DataStorage) and atomic file engine (FileDataStorage).",
+        "<code>com.campus.reserve.service.*</code>: Transactional controllers (AuthService, ResourceService, ReservationService, AnalyticsService).",
+        "<code>com.campus.reserve.ui.*</code>: Terminal interface (ConsoleUI) and Swing desktop app (CampusReserveGUI).",
+        "<code>com.campus.reserve.test.ReservationTestSuite</code>: Automated unit & multi-threaded race condition verification.",
+        "<code>com.campus.reserve.Main</code>: Multi-mode CLI, GUI, and test harness bootloader."
     ]
     for c in classes_summary:
         story.append(Paragraph(f"• {c}", body_style))

@@ -1,15 +1,15 @@
 @echo off
 echo =================================================================
-echo   Launching Smart Campus Lab & Resource Reservation System...
+echo   Launching Smart Campus Lab ^& Resource Reservation System...
 echo =================================================================
 
-if not exist bin\com\vityarthi\campus\Main.class (
+if not exist bin\com\campus\reserve\Main.class (
     echo Binaries not found. Triggering build...
     call build.bat
 )
 
 if "%1"=="" (
-    java -cp bin com.vityarthi.campus.Main --cli
+    java -cp bin com.campus.reserve.Main --cli
 ) else (
-    java -cp bin com.vityarthi.campus.Main %*
+    java -cp bin com.campus.reserve.Main %*
 )

@@ -2,7 +2,7 @@
 
 **Course:** CSE2006 – Programming in Java  
 **Academic Institution:** Vellore Institute of Technology (VIT)  
-**Evaluation:** VITyarthi - Build Your Own Project (Flipped Course Evaluation)
+**Project Category:** Academic Course Project (Programming in Java)
 
 ---
 

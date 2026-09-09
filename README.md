@@ -2,7 +2,7 @@
 
 **Course:** CSE2006: Programming in Java  
 **Institution:** Vellore Institute of Technology (VIT)  
-**Evaluation:** VITyarthi - Build Your Own Project  
+**Project Category:** Academic Course Project  
 **Author:** Rohan Chetty (Reg No: 23BCE10045)  
 **Status:** Production Ready (v2.4.0-LTS) | 100% Test Suite Verification
 
@@ -113,8 +113,8 @@ Smart Campus Lab & Resource Reservation System/
 ├── bin/                                  # Compiled bytecode class files
 └── src/
     └── com/
-        └── vityarthi/
-            └── campus/
+        └── campus/
+            └── reserve/
                 ├── Main.java             # Entry point (CLI, GUI, Test launcher)
                 ├── config/
                 │   └── CampusConfig.java # Campus settings & institutional presets
@@ -176,21 +176,21 @@ if (!(Test-Path "bin")) { New-Item -ItemType Directory -Path "bin" }; javac -d b
 ```powershell
 .\run.bat
 # or directly:
-java -cp bin com.vityarthi.campus.Main --cli
+java -cp bin com.campus.reserve.Main --cli
 ```
 
 #### Mode B: Modern Desktop Swing GUI
 ```powershell
 .\run.bat --gui
 # or directly:
-java -cp bin com.vityarthi.campus.Main --gui
+java -cp bin com.campus.reserve.Main --gui
 ```
 
 #### Mode C: Automated Verification Test Suite
 ```powershell
 .\run.bat --test
 # or directly:
-java -cp bin com.vityarthi.campus.Main --test
+java -cp bin com.campus.reserve.Main --test
 ```
 
 ---
@@ -205,7 +205,7 @@ The project comes with a built-in automated test suite (`ReservationTestSuite`) 
 
 Run tests at any time using:
 ```powershell
-java -cp bin com.vityarthi.campus.Main --test
+java -cp bin com.campus.reserve.Main --test
 ```
 
 Expected Output:
@@ -259,4 +259,4 @@ Expected Output:
 ---
 
 ## License & Academic Attribution
-This project was developed as an original academic solution for the **VITyarthi - Build Your Own Project** flipped course evaluation in **CSE2006: Programming in Java** at **Vellore Institute of Technology (VIT)**. All rights reserved.
+This project was developed as an original academic course project for **CSE2006: Programming in Java** at **Vellore Institute of Technology (VIT)**. All rights reserved.

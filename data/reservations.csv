@@ -1,7 +1,10 @@
 resId,userId,userName,role,resourceId,resourceName,slotId,slotFmt,date,purpose,status
 RES-20260911-6875C7,U-TEMP-1,Test Runner,STUDENT,LAB-AI-201,NVIDIA Deep Learning & GPU Cluster,SLOT-1,08:00 - 10:00,2026-09-11,Re-booked slot,CANCELLED
 RES-20260915-23A7F3,USR-RACE-3,Competitor Student 3,STUDENT,LAB-SCSE-101,Advanced Computing Lab I,SLOT-4,15:15 - 17:15,2026-09-15,High-priority contest by thread 3,CANCELLED
+RES-20260911-F06BD0,U-TEMP-1,Test Runner,STUDENT,LAB-AI-201,NVIDIA Deep Learning & GPU Cluster,SLOT-1,08:00 - 10:00,2026-09-11,Re-booked slot,CANCELLED
+RES-20260915-0F8102,USR-RACE-4,Competitor Student 4,STUDENT,LAB-SCSE-101,Advanced Computing Lab I,SLOT-4,15:15 - 17:15,2026-09-15,High-priority contest by thread 4,CANCELLED
 RES-20260911-EECF65,U-TEMP-1,Test Runner,STUDENT,LAB-AI-201,NVIDIA Deep Learning & GPU Cluster,SLOT-1,08:00 - 10:00,2026-09-11,Re-booked slot,CANCELLED
 RES-20260911-BBFC74,U-TEMP-1,Test Runner,STUDENT,LAB-AI-201,NVIDIA Deep Learning & GPU Cluster,SLOT-1,08:00 - 10:00,2026-09-11,AI Project Work,CANCELLED
 RES-20260911-D0A261,U-TEMP-1,Test Runner,STUDENT,LAB-AI-201,NVIDIA Deep Learning & GPU Cluster,SLOT-1,08:00 - 10:00,2026-09-11,AI Project Work,CANCELLED
 RES-20260915-B2DEBE,USR-RACE-2,Competitor Student 2,STUDENT,LAB-SCSE-101,Advanced Computing Lab I,SLOT-4,15:15 - 17:15,2026-09-15,High-priority contest by thread 2,CANCELLED
+RES-20260911-AA4654,U-TEMP-1,Test Runner,STUDENT,LAB-AI-201,NVIDIA Deep Learning & GPU Cluster,SLOT-1,08:00 - 10:00,2026-09-11,AI Project Work,CANCELLED
