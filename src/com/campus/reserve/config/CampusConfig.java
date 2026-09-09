@@ -2,36 +2,35 @@ package com.campus.reserve.config;
 
 /**
  * CampusConfig
- * Holds campus environment properties, institutional settings, and defaults
- * for the Smart Campus Lab & Resource Reservation System.
- * Tailored for VIT campus infrastructure with configurable presets.
+ * Holds institutional settings, campus infrastructure blocks, and operational defaults
+ * for the Smart Campus Lab & Resource Reservation System at VIT Bhopal University.
  */
 public class CampusConfig {
 
-    public static final String INSTITUTION_NAME = "Vellore Institute of Technology (VIT)";
+    public static final String INSTITUTION_NAME = "VIT Bhopal University";
     public static final String SYSTEM_NAME = "Smart Campus Lab & Resource Reservation System";
     public static final String SYSTEM_VERSION = "v2.4.0-LTS";
-    public static final String SYSTEM_TAGLINE = "High-Throughput Concurrent Academic Lab & Equipment Booking Platform";
+    public static final String SYSTEM_TAGLINE = "High-Throughput Academic Lab & Equipment Booking Platform";
 
-    // Configurable active campus preset
-    private static String activeCampus = "VIT Campus (Customizable / Bhopal / Vellore / Chennai / AP)";
+    // Campus location
+    private static String activeCampus = "VIT Bhopal University (Kothri Kalan, Sehore)";
 
-    // Default Academic Blocks
+    // Official VIT Bhopal Campus Academic Blocks & Facilities
     public static final String[] CAMPUS_BLOCKS = {
-        "Academic Block 1 (AB-1) - Computing Wing",
-        "Academic Block 2 (AB-2) - Innovation Wing",
-        "Technology Tower (TT) - Advanced Research",
-        "Central Computing & AI Cluster (CCAC)",
-        "IoT & Embedded Hardware Complex"
+        "Academic Block (AB) - Computing & Cyber Wing",
+        "Lab Complex (LC) - Advanced Engineering Labs",
+        "AI & Gaming Studio (Central Block)",
+        "IoT & Robotics Innovation Center",
+        "SEEE Hardware & Microelectronics Lab"
     };
 
-    // Department / School names
+    // Official VIT Bhopal Schools & Divisions
     public static final String[] DEPARTMENTS = {
-        "SCSE - School of Computer Science and Engineering",
-        "SCOPE - School of Computer Science & Operations",
-        "SENSE - School of Electronics Engineering",
-        "SITE - School of Information Technology & Engineering",
-        "SELECT - School of Electrical Engineering"
+        "SCSE - School of Computing Science and Engineering",
+        "SEEE - School of Electrical and Electronics Engineering",
+        "SMEC - School of Mechanical Engineering",
+        "SASL - School of Advanced Sciences and Languages",
+        "School of Bioengineering"
     };
 
     // Quotas and operational rules

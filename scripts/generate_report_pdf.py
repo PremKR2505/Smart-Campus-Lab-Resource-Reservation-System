@@ -40,7 +40,7 @@ class NumberedCanvas(canvas.Canvas):
 
         # Bottom Footer
         self.line(54, 48, 558, 48)
-        self.drawString(54, 36, "Vellore Institute of Technology (VIT)")
+        self.drawString(54, 36, "VIT Bhopal University")
         self.drawRightString(558, 36, f"Page {self._pageNumber} of {page_count}")
         self.restoreState()
 
@@ -123,10 +123,10 @@ def build_pdf():
 
     # ==================== COVER PAGE ====================
     story.append(Spacer(1, 40))
-    story.append(Paragraph("VELLORE INSTITUTE OF TECHNOLOGY", ParagraphStyle(
-        'InstHeader', parent=styles['Normal'], fontName='Helvetica-Bold', fontSize=14, leading=18, textColor=colors.HexColor("#4A5568"), alignment=1
+    story.append(Paragraph("VIT BHOPAL UNIVERSITY", ParagraphStyle(
+        'InstHeader', parent=styles['Normal'], fontName='Helvetica-Bold', fontSize=15, leading=19, textColor=colors.HexColor("#4A5568"), alignment=1
     )))
-    story.append(Paragraph("School of Computer Science and Engineering (SCSE)", ParagraphStyle(
+    story.append(Paragraph("School of Computing Science and Engineering (SCSE)", ParagraphStyle(
         'SchoolHeader', parent=styles['Normal'], fontName='Helvetica', fontSize=11, leading=15, textColor=colors.HexColor("#718096"), alignment=1
     )))
     story.append(Spacer(1, 40))
@@ -165,7 +165,7 @@ def build_pdf():
     # ==================== SECTIONS 2 & 3 ====================
     story.append(Paragraph("1. Introduction", h1_style))
     story.append(Paragraph(
-        "In modern academic institutions like Vellore Institute of Technology (VIT), engineering students and research scholars rely extensively on high-value laboratory facilities. These environments range from High-Performance Computing (HPC) AI clusters equipped with NVIDIA GPUs to specialized Internet of Things (IoT) testbeds, FPGA development stations, and Digital Storage Oscilloscopes. Under peak academic windows, uncoordinated access causes severe scheduling contention, double-booking, and inequitable facility distribution.",
+        "In modern academic institutions like VIT Bhopal University, engineering students and research scholars rely extensively on high-value laboratory facilities. These environments range from High-Performance Computing (HPC) AI clusters equipped with NVIDIA GPUs to specialized Internet of Things (IoT) testbeds, FPGA development stations, and Digital Storage Oscilloscopes. Under peak academic windows, uncoordinated access causes severe scheduling contention, double-booking, and inequitable facility distribution.",
         body_style
     ))
     story.append(Spacer(1, 8))
@@ -383,7 +383,7 @@ def build_pdf():
         "Goetz, Brian, et al. <i>Java Concurrency in Practice</i>. Addison-Wesley Professional, 2006.",
         "Bloch, Joshua. <i>Effective Java (3rd Edition)</i>. Addison-Wesley, 2018.",
         "Oracle Corporation. <i>Java SE Platform Documentation</i>. https://docs.oracle.com/en/java/",
-        "Vellore Institute of Technology. <i>CSE2006 Programming in Java Course Syllabus</i>, 2025–2026."
+        "VIT Bhopal University. <i>CSE2006 Programming in Java Course Syllabus</i>, 2025–2026."
     ]
     for r in refs:
         story.append(Paragraph(f"• {r}", body_style))

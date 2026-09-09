@@ -32,7 +32,6 @@ public class CampusReserveGUI extends JFrame {
 
     // UI Components
     private JComboBox<String> userSelector;
-    private JComboBox<String> campusSelector;
     private JTable resourceTable;
     private DefaultTableModel resourceTableModel;
     private JTable reservationTable;
@@ -107,21 +106,16 @@ public class CampusReserveGUI extends JFrame {
         titlePanel.add(lblTitle);
         titlePanel.add(lblSub);
 
-        // Right controls: Campus Preset & Active User Switcher
+        // Right controls: VIT Bhopal Badge & Active User Switcher
         JPanel controls = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 0));
         controls.setOpaque(false);
 
-        JLabel lblCamp = new JLabel("Campus:");
-        lblCamp.setForeground(Color.WHITE);
-        campusSelector = new JComboBox<>(new String[]{
-                "VIT Bhopal Campus", "VIT Vellore Campus", "VIT Chennai Campus", "VIT-AP Campus"
-        });
-        campusSelector.addActionListener(e -> {
-            CampusConfig.setActiveCampus((String) campusSelector.getSelectedItem());
-            lblStatusMessage.setText("Campus switched to: " + CampusConfig.getActiveCampus());
-        });
+        JLabel lblCampusBadge = new JLabel("Campus: VIT Bhopal University");
+        lblCampusBadge.setFont(new Font("Segoe UI", Font.BOLD, 12));
+        lblCampusBadge.setForeground(new Color(255, 215, 0));
+        lblCampusBadge.setBorder(new EmptyBorder(0, 0, 0, 10));
 
-        JLabel lblUser = new JLabel("Logged In:");
+        JLabel lblUser = new JLabel("Active User:");
         lblUser.setForeground(Color.WHITE);
         userSelector = new JComboBox<>(new String[]{
                 "Rohan Chetty (Student: 23BCE10045)",
@@ -130,12 +124,14 @@ public class CampusReserveGUI extends JFrame {
                 "Vikram Singh (Lab Admin: ADM-004)"
         });
 
+        controls.add(lblCampusBadge);
+        controls.add(lblUser);
+        controls.add(userSelector);
+
         // Set initial user
         authService.login("USR-STD-01", "vit@2024");
         userSelector.addActionListener(e -> handleUserSwitch());
 
-        controls.add(lblCamp);
-        controls.add(campusSelector);
         controls.add(lblUser);
         controls.add(userSelector);
 

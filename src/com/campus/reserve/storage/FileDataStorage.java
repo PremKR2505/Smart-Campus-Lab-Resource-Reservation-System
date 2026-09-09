@@ -336,52 +336,52 @@ public class FileDataStorage implements DataStorage {
     }
 
     private void seedInitialData() {
-        // Seed Users
-        userMap.put("USR-STD-01", new Student("USR-STD-01", "Rohan Chetty", "rohan.chetty@vitstudent.ac.in",
+        // Seed Users with authentic VIT Bhopal domain
+        userMap.put("USR-STD-01", new Student("USR-STD-01", "Rohan Chetty", "rohan.chetty2023@vitbhopal.ac.in",
                 "vit@2024", "23BCE10045", "SCSE", 4, 9.4));
-        userMap.put("USR-STD-02", new Student("USR-STD-02", "Ananya Sharma", "ananya.sharma@vitstudent.ac.in",
-                "vit@2024", "23BCE10210", "SCOPE", 4, 8.9));
-        userMap.put("USR-FAC-01", new Faculty("USR-FAC-01", "Dr. Rajesh K.", "rajesh.kumar@vit.ac.in",
+        userMap.put("USR-STD-02", new Student("USR-STD-02", "Ananya Sharma", "ananya.sharma2023@vitbhopal.ac.in",
+                "vit@2024", "23BCE10210", "SCSE", 4, 8.9));
+        userMap.put("USR-FAC-01", new Faculty("USR-FAC-01", "Dr. Rajesh K.", "rajesh.kumar@vitbhopal.ac.in",
                 "vit@fac", "EMP-5082", "SCSE", "Associate Professor"));
-        userMap.put("USR-ADM-01", new LabAdmin("USR-ADM-01", "Vikram Singh", "vikram.admin@vit.ac.in",
-                "vit@admin", "ADM-004", "Academic Block 1", 5));
+        userMap.put("USR-ADM-01", new LabAdmin("USR-ADM-01", "Vikram Singh", "vikram.admin@vitbhopal.ac.in",
+                "vit@admin", "ADM-004", "Academic Block (AB)", 5));
 
-        // Seed Labs
-        resourceMap.put("LAB-SCSE-101", new LabRoom("LAB-SCSE-101", "Advanced Computing Lab I",
-                "Academic Block 1 (AB-1)", 1, 60, ResourceStatus.AVAILABLE,
+        // Seed VIT Bhopal Laboratories
+        resourceMap.put("LAB-SCSE-101", new LabRoom("LAB-SCSE-101", "SCSE Advanced Computing Lab I",
+                "Academic Block (AB)", 1, 60, ResourceStatus.AVAILABLE,
                 60, true, false, "Ubuntu 22.04 LTS / Windows 11 Dual-Boot"));
 
-        resourceMap.put("LAB-AI-201", new LabRoom("LAB-AI-201", "NVIDIA Deep Learning & GPU Cluster",
-                "Central Computing Center", 2, 35, ResourceStatus.AVAILABLE,
+        resourceMap.put("LAB-AI-201", new LabRoom("LAB-AI-201", "AI, Deep Learning & Gaming Studio",
+                "Lab Complex (LC)", 2, 35, ResourceStatus.AVAILABLE,
                 35, true, true, "Ubuntu 22.04 LTS + CUDA 12.4"));
 
         resourceMap.put("LAB-IOT-301", new LabRoom("LAB-IOT-301", "IoT & Cyber-Physical Systems Lab",
-                "Academic Block 2 (AB-2)", 3, 40, ResourceStatus.AVAILABLE,
+                "Lab Complex (LC)", 3, 40, ResourceStatus.AVAILABLE,
                 40, true, false, "Linux Debian + Real-time Embedded Toolchains"));
 
-        resourceMap.put("LAB-ROBO-401", new LabRoom("LAB-ROBO-401", "Robotics & Automation Arena",
-                "Technology Tower (TT)", 1, 30, ResourceStatus.AVAILABLE,
+        resourceMap.put("LAB-ROBO-401", new LabRoom("LAB-ROBO-401", "Robotics & Embedded Automation Lab",
+                "Academic Block (AB)", 1, 30, ResourceStatus.AVAILABLE,
                 30, true, false, "ROS2 Humble / Ubuntu Linux"));
 
-        resourceMap.put("LAB-NET-501", new LabRoom("LAB-NET-501", "Cisco Networking & Security Lab",
-                "Academic Block 1 (AB-1)", 4, 50, ResourceStatus.AVAILABLE,
-                50, true, false, "Packet Tracer / GNS3 / Wireshark Workstations"));
+        resourceMap.put("LAB-CYBER-501", new LabRoom("LAB-CYBER-501", "Cyber Security & Digital Forensics Lab",
+                "Academic Block (AB)", 2, 50, ResourceStatus.AVAILABLE,
+                50, true, false, "Kali Linux / Wireshark / Forensics Toolchains"));
 
-        // Seed Specialized Equipment
+        // Seed Specialized Research Equipment
         resourceMap.put("EQ-FPGA-01", new Equipment("EQ-FPGA-01", "Xilinx Artix-7 FPGA Development Kit #1",
-                "Academic Block 2 (AB-2)", 3, 1, ResourceStatus.AVAILABLE,
+                "Lab Complex (LC)", 3, 1, ResourceStatus.AVAILABLE,
                 "FPGA Development Board", "SN-XIL-2024-001", "AMD Xilinx", 5));
 
         resourceMap.put("EQ-DSO-02", new Equipment("EQ-DSO-02", "Keysight 200MHz Digital Oscilloscope",
-                "Academic Block 2 (AB-2)", 3, 1, ResourceStatus.AVAILABLE,
+                "Lab Complex (LC)", 3, 1, ResourceStatus.AVAILABLE,
                 "Benchtop Measuring Tool", "SN-KEYS-9801", "Keysight Technologies", 5));
 
-        resourceMap.put("EQ-VR-03", new Equipment("EQ-VR-03", "Meta Quest 3 Enterprise VR Testing Rig",
-                "Central Computing Center", 2, 1, ResourceStatus.AVAILABLE,
+        resourceMap.put("EQ-VR-03", new Equipment("EQ-VR-03", "Meta Quest 3 Gaming & VR Testing Rig",
+                "AI & Gaming Studio", 1, 1, ResourceStatus.AVAILABLE,
                 "Spatial Computing Headset", "SN-META-3301", "Meta Platforms", 4));
 
         resourceMap.put("EQ-RPI-04", new Equipment("EQ-RPI-04", "Raspberry Pi 5 AI Edge Cluster Box",
-                "Academic Block 1 (AB-1)", 1, 1, ResourceStatus.AVAILABLE,
+                "Academic Block (AB)", 1, 1, ResourceStatus.AVAILABLE,
                 "Edge Compute Kit", "SN-RPI-5002", "Raspberry Pi Foundation", 5));
     }
 
