@@ -1,0 +1,5 @@
+role,userId,name,email,passwordHash,param1,param2,param3,param4
+LAB_ADMIN,USR-ADM-01,Vikram Singh,vikram.admin@vit.ac.in,vit@admin,ADM-004,Academic Block 1,5,N/A
+STUDENT,USR-STD-01,Rohan Chetty,rohan.chetty@vitstudent.ac.in,vit@2024,23BCE10045,SCSE,4,9.40
+STUDENT,USR-STD-02,Ananya Sharma,ananya.sharma@vitstudent.ac.in,vit@2024,23BCE10210,SCOPE,4,8.90
+FACULTY,USR-FAC-01,Dr. Rajesh K.,rajesh.kumar@vit.ac.in,vit@fac,EMP-5082,SCSE,Associate Professor,N/A

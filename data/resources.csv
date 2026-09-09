@@ -1,0 +1,10 @@
+type,resourceId,name,blockName,floorLevel,capacity,status,param1,param2,param3,param4
+LAB,LAB-ROBO-401,Robotics & Automation Arena,Technology Tower (TT),1,30,AVAILABLE,30,true,false,ROS2 Humble / Ubuntu Linux
+LAB,LAB-AI-201,NVIDIA Deep Learning & GPU Cluster,Central Computing Center,2,35,AVAILABLE,35,true,true,Ubuntu 22.04 LTS + CUDA 12.4
+EQUIPMENT,EQ-VR-03,Meta Quest 3 Enterprise VR Testing Rig,Central Computing Center,2,1,AVAILABLE,Spatial Computing Headset,SN-META-3301,Meta Platforms,4
+EQUIPMENT,EQ-RPI-04,Raspberry Pi 5 AI Edge Cluster Box,Academic Block 1 (AB-1),1,1,AVAILABLE,Edge Compute Kit,SN-RPI-5002,Raspberry Pi Foundation,5
+EQUIPMENT,EQ-DSO-02,Keysight 200MHz Digital Oscilloscope,Academic Block 2 (AB-2),3,1,AVAILABLE,Benchtop Measuring Tool,SN-KEYS-9801,Keysight Technologies,5
+LAB,LAB-IOT-301,IoT & Cyber-Physical Systems Lab,Academic Block 2 (AB-2),3,40,AVAILABLE,40,true,false,Linux Debian + Real-time Embedded Toolchains
+LAB,LAB-NET-501,Cisco Networking & Security Lab,Academic Block 1 (AB-1),4,50,AVAILABLE,50,true,false,Packet Tracer / GNS3 / Wireshark Workstations
+LAB,LAB-SCSE-101,Advanced Computing Lab I,Academic Block 1 (AB-1),1,60,AVAILABLE,60,true,false,Ubuntu 22.04 LTS / Windows 11 Dual-Boot
+EQUIPMENT,EQ-FPGA-01,Xilinx Artix-7 FPGA Development Kit #1,Academic Block 2 (AB-2),3,1,AVAILABLE,FPGA Development Board,SN-XIL-2024-001,AMD Xilinx,5
