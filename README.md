@@ -3,7 +3,7 @@
 **Course:** CSE2006: Programming in Java  
 **Institution:** Vellore Institute of Technology (VIT)  
 **Project Category:** Academic Course Project  
-**Author:** Rohan Chetty (Reg No: 23BCE10045)  
+**Author:** Rohan Chetty (Reg No: 25BAI10510)  
 **Status:** Production Ready (v2.4.0-LTS) | 100% Test Suite Verification
 
 ---
@@ -251,7 +251,7 @@ Expected Output:
 
 | Role | Name | Identifier | Login Email / ID | Password | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Student** | Rohan Chetty | Reg: 23BCE10045 | `USR-STD-01` or `rohan.chetty@vitstudent.ac.in` | `vit@2024` | Quota: 3 Slots |
+| **Student** | Rohan Chetty | Reg: 25BAI10510 | `USR-STD-01` or `rohan.chetty@vitstudent.ac.in` | `vit@2024` | Quota: 3 Slots |
 | **Student** | Ananya Sharma | Reg: 23BCE10210 | `USR-STD-02` or `ananya.sharma@vitstudent.ac.in` | `vit@2024` | Quota: 3 Slots |
 | **Faculty** | Dr. Rajesh K. | Emp: EMP-5082 | `USR-FAC-01` or `rajesh.kumar@vit.ac.in` | `vit@fac` | Quota: 10 Slots |
 | **Lab Admin** | Vikram Singh | Staff: ADM-004 | `USR-ADM-01` or `vikram.admin@vit.ac.in` | `vit@admin` | Maintenance Controls |

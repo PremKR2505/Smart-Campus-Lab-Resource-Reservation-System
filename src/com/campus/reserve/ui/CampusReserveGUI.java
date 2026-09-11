@@ -118,7 +118,7 @@ public class CampusReserveGUI extends JFrame {
         JLabel lblUser = new JLabel("Active User:");
         lblUser.setForeground(Color.WHITE);
         userSelector = new JComboBox<>(new String[]{
-                "Rohan Chetty (Student: 23BCE10045)",
+                "Rohan Chetty (Student: 25BAI10510)",
                 "Ananya Sharma (Student: 23BCE10210)",
                 "Dr. Rajesh K. (Faculty: EMP-5082)",
                 "Vikram Singh (Lab Admin: ADM-004)"

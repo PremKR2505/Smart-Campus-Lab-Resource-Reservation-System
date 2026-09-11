@@ -338,7 +338,7 @@ public class FileDataStorage implements DataStorage {
     private void seedInitialData() {
         // Seed Users with authentic VIT Bhopal domain
         userMap.put("USR-STD-01", new Student("USR-STD-01", "Rohan Chetty", "rohan.chetty2023@vitbhopal.ac.in",
-                "vit@2024", "23BCE10045", "SCSE", 4, 9.4));
+                "vit@2024", "25BAI10510", "SCSE", 4, 9.4));
         userMap.put("USR-STD-02", new Student("USR-STD-02", "Ananya Sharma", "ananya.sharma2023@vitbhopal.ac.in",
                 "vit@2024", "23BCE10210", "SCSE", 4, 8.9));
         userMap.put("USR-FAC-01", new Faculty("USR-FAC-01", "Dr. Rajesh K.", "rajesh.kumar@vitbhopal.ac.in",

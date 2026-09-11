@@ -9,7 +9,7 @@ import com.campus.reserve.config.CampusConfig;
 public class Student extends User {
     private static final long serialVersionUID = 1L;
 
-    private String registrationNumber; // e.g. 23BCE10045
+    private String registrationNumber; // e.g. 25BAI10510
     private String department;         // e.g. SCSE
     private int semester;              // e.g. 4
     private double cgpa;

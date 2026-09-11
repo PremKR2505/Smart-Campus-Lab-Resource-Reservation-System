@@ -116,7 +116,23 @@ def build_pdf():
         fontName='Courier',
         fontSize=8,
         leading=11,
-        textColor=colors.HexColor("#1A202C")
+        textColor=colors.HexColor("#E2E8F0")  # Light text on dark background
+    )
+    code_pass_style = ParagraphStyle(
+        'CodePass',
+        parent=styles['Normal'],
+        fontName='Courier',
+        fontSize=8,
+        leading=11,
+        textColor=colors.HexColor("#68D391")  # Green for PASS lines
+    )
+    code_header_style = ParagraphStyle(
+        'CodeHeader',
+        parent=styles['Normal'],
+        fontName='Courier-Bold',
+        fontSize=8,
+        leading=11,
+        textColor=colors.HexColor("#90CDF4")  # Blue for headers
     )
 
     story = []
@@ -142,7 +158,7 @@ def build_pdf():
         [Paragraph("<b>Course Code & Title:</b>", body_style), Paragraph("CSE2006: Programming in Java", body_style)],
         [Paragraph("<b>Project Category:</b>", body_style), Paragraph("Academic Course Project (Programming in Java)", body_style)],
         [Paragraph("<b>Student Name:</b>", body_style), Paragraph("Rohan Chetty", body_style)],
-        [Paragraph("<b>Registration Number:</b>", body_style), Paragraph("23BCE10045", body_style)],
+        [Paragraph("<b>Registration Number:</b>", body_style), Paragraph("25BAI10510", body_style)],
         [Paragraph("<b>Degree & Branch:</b>", body_style), Paragraph("B.Tech - Computer Science and Engineering", body_style)],
         [Paragraph("<b>Semester / Academic Year:</b>", body_style), Paragraph("Winter Semester 2025–2026", body_style)],
         [Paragraph("<b>System Version:</b>", body_style), Paragraph("v2.4.0-LTS (Final Submission)", body_style)],
@@ -336,17 +352,49 @@ def build_pdf():
         "   TEST EXECUTION SUMMARY: 14 PASSED, 0 FAILED (100% SUCCESS)",
         "----------------------------------------------------------------"
     ]
-    test_rows = [[Paragraph(f"<font face='Courier' size='7.5'>{line}</font>", code_style)] for line in test_box_content]
-    t_test = Table(test_rows, colWidths=[500])
-    t_test.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor("#1A202C")),
-        ('TOPPADDING', (0, 0), (-1, -1), 1),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 1),
-        ('LEFTPADDING', (0, 0), (-1, -1), 10),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 10),
-    ]))
-    story.append(t_test)
+    from reportlab.platypus import Flowable
+
+    class TerminalBox(Flowable):
+        """Renders a terminal-style code block by drawing directly on canvas."""
+        def __init__(self, lines, width=500, font_size=7.5, line_height=11, padding=10):
+            Flowable.__init__(self)
+            self.lines = lines
+            self.box_width = width
+            self.font_size = font_size
+            self.line_height = line_height
+            self.padding = padding
+            self.height = padding * 2 + len(lines) * line_height
+
+        def wrap(self, availWidth, availHeight):
+            return self.box_width, self.height
+
+        def draw(self):
+            c = self.canv
+            # Draw dark background
+            c.setFillColor(colors.HexColor("#1A202C"))
+            c.rect(0, 0, self.box_width, self.height, fill=1, stroke=0)
+
+            y = self.height - self.padding - self.font_size
+            for line in self.lines:
+                # Pick color per line type
+                if '[PASS]' in line:
+                    c.setFillColor(colors.HexColor("#68D391"))   # green
+                elif 'ACADEMIC EVALUATION' in line or 'System:' in line or 'TEST EXECUTION' in line:
+                    c.setFillColor(colors.HexColor("#90CDF4"))   # blue
+                elif '===' in line or '---' in line:
+                    c.setFillColor(colors.HexColor("#4A5568"))   # dim gray for borders
+                elif '[WINNER]' in line or 'Telemetry' in line or line.startswith('>>>'):
+                    c.setFillColor(colors.HexColor("#F6E05E"))   # yellow
+                else:
+                    c.setFillColor(colors.HexColor("#E2E8F0"))   # light gray
+
+                c.setFont("Courier", self.font_size)
+                c.drawString(self.padding, y, line)
+                y -= self.line_height
+
+    story.append(TerminalBox(test_box_content))
     story.append(Spacer(1, 10))
+
 
     # ==================== CHALLENGES & LEARNINGS ====================
     story.append(Paragraph("9. Challenges Faced & Engineering Solutions", h1_style))

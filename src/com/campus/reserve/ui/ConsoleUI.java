@@ -314,7 +314,7 @@ public class ConsoleUI {
 
     private void switchUserFlow() {
         System.out.println("\nSwitch Active Account:");
-        System.out.println("  1. Student: Rohan Chetty (23BCE10045) [SCSE]");
+        System.out.println("  1. Student: Rohan Chetty (25BAI10510) [SCSE]");
         System.out.println("  2. Student: Ananya Sharma (23BCE10210) [SCOPE]");
         System.out.println("  3. Faculty: Dr. Rajesh K. (EMP-5082) [SCSE]");
         System.out.println("  4. Lab Admin: Vikram Singh (ADM-004) [AB-1]");

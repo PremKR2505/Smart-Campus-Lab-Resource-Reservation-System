@@ -12,7 +12,7 @@
 | **Project Category** | Academic Course Capstone Project |
 | **Institution** | Vellore Institute of Technology (VIT) |
 | **Student Name** | Rohan Chetty |
-| **Registration Number** | 23BCE10045 |
+| **Registration Number** | 25BAI10510 |
 | **School / Department** | School of Computer Science and Engineering (SCSE) |
 | **Semester & Year** | Winter Semester 2025–2026 |
 | **Date of Submission** | September 2026 |
@@ -428,7 +428,7 @@ The implementation comprises over 1,800 lines of modular Java code organized acr
            SMART CAMPUS LAB & RESOURCE RESERVATION SYSTEM (v2.4.0-LTS)
            Campus: VIT Campus (Customizable / Bhopal / Vellore / Chennai / AP)
 ==========================================================================================
- [Logged In] Rohan Chetty | RegNo: 23BCE10045 | Role: STUDENT | Active Quota Limit: 3 Bookings
+ [Logged In] Rohan Chetty | RegNo: 25BAI10510 | Role: STUDENT | Active Quota Limit: 3 Bookings
 ------------------------------------------------------------------------------------------
   1. Browse Campus Laboratories & Workstations
   2. Browse Specialized Hardware & Equipment
