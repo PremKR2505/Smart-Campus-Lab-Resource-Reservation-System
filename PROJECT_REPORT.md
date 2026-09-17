@@ -383,6 +383,8 @@ The implementation comprises over 1,800 lines of modular Java code organized acr
 ---
 
 ### Section 10: Screenshots & Results
+<img width="1320" height="924" alt="image" src="https://github.com/user-attachments/assets/a805e6bf-b523-4952-a1fc-9233973f914d" />
+
 
 #### 10.1 Automated Test Execution Results
 ```
