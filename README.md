@@ -247,6 +247,10 @@ Expected Output:
 
 ---
 
+## Screenshots
+<img width="1320" height="924" alt="image" src="https://github.com/user-attachments/assets/e1a8a27a-02d3-408c-94dc-3ad1a3b4f235" />
+
+
 ## Pre-Configured Test Accounts
 
 | Role | Name | Identifier | Login Email / ID | Password | Notes |
